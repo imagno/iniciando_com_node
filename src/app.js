@@ -27,13 +27,7 @@ app.post('/products', (req, res) => {
   
   products.push(product);
 
-  fs.writeFile('products.json', JSON.stringify(products), err => {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log('Produto inserido com sucesso')
-    }
-  });
+  updateProductFile();
 
   return res
     .json(product);
@@ -63,6 +57,8 @@ app.put('/products/:id', (req, res) => {
     price
   }
 
+  updateProductFile();
+
   return res
     .json({
       message: "Produto alterado com sucesso"
@@ -76,10 +72,22 @@ app.delete('/products/:id', (req, res) => {
 
   products.splice(productIndex, 1);
 
+  updateProductFile();
+
   return res
     .json({
       message: 'Produto removido com sucesso'
     });
 });
+
+const updateProductFile = () => {
+  fs.writeFile('products.json', JSON.stringify(products), err => {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('Produto inserido com sucesso')
+    }
+  });
+}
 
 app.listen(4001, () => console.log('Servidor rodando na porta 4001'));

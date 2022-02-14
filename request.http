@@ -22,4 +22,4 @@ content-Type: application/json
 }
 
 ###
-DELETE http://localhost:4001/products/
+DELETE http://localhost:4001/products/fa636a5f-2843-4abf-8c5e-a52cb76c56e2
