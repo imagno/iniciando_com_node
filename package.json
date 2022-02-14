@@ -2,7 +2,7 @@
   "name": "iniciando_com_node",
   "version": "1.0.0",
   "description": "Primeiro projeto 2022 CodeDrops",
-  "main": "src/server.js",
+  "main": "src/app.js",
   "scripts": {
     "dev:server": "nodemon"
   },
@@ -10,5 +10,8 @@
   "license": "MIT",
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
   }
 }
