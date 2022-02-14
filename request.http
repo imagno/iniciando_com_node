@@ -2,8 +2,8 @@ POST http://localhost:4001/products
 content-Type: application/json
 
 {
-  "name": "Mochila Verde",
-  "price": 96.9
+  "name": "Caderno 96 folhas",
+  "price": 16.87
 }
 
 ###
